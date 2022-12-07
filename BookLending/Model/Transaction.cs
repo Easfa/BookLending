@@ -3,17 +3,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BookLending.Model
 {
-    public class Transactions
+    public class Transaction
     {
         [Key]
         public int T_ID { get; set; }
 
-        [ForeignKey("Persons")]
+        [ForeignKey("Person")]
         public int P_ID { get; set; }
-        public virtual Persons Person { get; set; }
+        public virtual Person Person { get; set; }
 
-        [ForeignKey("Books")]
+        [ForeignKey("Book")]
         public int B_ID { get; set; }
-        public virtual Books Book { get; set; }
+        public virtual Book Book { get; set; }
     }
 }

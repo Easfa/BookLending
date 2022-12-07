@@ -1,6 +1,6 @@
 ﻿namespace BookLending.Model
 {
-    public class Books
+    public class Book
     {
         public int B_ID { get; set; }
         public string BookName { get; set; }
