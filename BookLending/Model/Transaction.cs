@@ -15,5 +15,9 @@ namespace BookLending.Model
         [ForeignKey("Book")]
         public int B_ID { get; set; }
         public virtual Book Book { get; set; }
+
+        public DateTime BarrowingDate { get; set; }
+
+        public DateTime LendingDate { get; set; }
     }
 }

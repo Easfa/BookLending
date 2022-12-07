@@ -1,7 +1,11 @@
+using BookLending.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<BookDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultCon")));
 
 var app = builder.Build();
 

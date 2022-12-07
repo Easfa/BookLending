@@ -7,7 +7,7 @@ namespace BookLending.Data
     {
             public DbSet<Book> Books { get; set; }
             public DbSet<Person> Person { get; set; }
-            public DbSet<Transaction> Transactions { get; set; }
+            public DbSet<Transaction> Transaction { get; set; }
 
         public BookDbContext(DbContextOptions<BookDbContext> options) : base(options)
         {

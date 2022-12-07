@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace BookLending.Pages.Show
 {
-    public class BarrowsListModel : PageModel
+    public class ListAllModel : PageModel
     {
         public void OnGet()
         {

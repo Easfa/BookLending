@@ -1,7 +1,10 @@
-﻿namespace BookLending.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BookLending.Model
 {
     public class Person
     {
+        [Key]
         public int P_ID { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
