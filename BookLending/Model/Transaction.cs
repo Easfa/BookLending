@@ -17,7 +17,7 @@ namespace BookLending.Model
         public virtual Book Book { get; set; }
 
         public DateTime BarrowingDate { get; set; }
-
-        public DateTime LendingDate { get; set; }
+        
+        public DateTime? LendingDate { get; set; }
     }
 }
