@@ -10,12 +10,12 @@
         <div class=row>
         <div class="col-3"></div>
         <div class="col-6" align ="center">
-           <div class="mt-2">Name: </div> <div class="mt-1"><input /> </div>
-           <div class="mt-2">LastName: </div> <div class="mt-1"><input /> </div>
-           <div class="mt-2">Age: </div> <div class="mt-1"><input /> </div> 
-           <div class="mt-2">Book Name: </div> <div class="mt-1"><input /> </div>
-           <div class="mt-2">Author Name: </div> <div class="mt-1"><input /> </div>
-           <div class="mt-2">Page Numbers: </div> <div class="mt-1"><input /> </div>
+           <div class="mt-2">Name: </div> <div class="mt-1"><input asp-for="@Model.Person.Name"/> </div>
+           <div class="mt-2">LastName: </div> <div class="mt-1"><input asp-for="@Model.Person.LastName"/> </div>
+           <div class="mt-2">Age: </div> <div class="mt-1"><input asp-for="@Model.Person.Age"/> </div> 
+           <div class="mt-2">Book Name: </div> <div class="mt-1"><input asp-for="@Model.Book.BookName"/> </div>
+           <div class="mt-2">Author Name: </div> <div class="mt-1"><input asp-for="@Model.Book.BookAuthor"/> </div>
+           <div class="mt-2">Page Numbers: </div> <div class="mt-1"><input asp-for="@Model.Book.PageNumbers"/> </div>
            <div class="mt-3">
                <button type="submit" class="btn btn-secondary">Add Barrow</button>
            </div>

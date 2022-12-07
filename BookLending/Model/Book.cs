@@ -10,5 +10,8 @@ namespace BookLending.Model
         public string BookAuthor { get; set; }
         public int PageNumbers { get; set; }
 
+        public Book() { }
+        public Book(string bookname, string bookauthor, int pagenumbers) { BookName = bookname; BookAuthor = bookauthor; PageNumbers = pagenumbers; }
+
     }
 }
