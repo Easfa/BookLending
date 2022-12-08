@@ -9,6 +9,11 @@ namespace BookLending.Pages.Transaction
         [BindProperty(SupportsGet = true)]
         public int Tid { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        public string control { get; set; }
+
+
+
         private readonly BookDbContext _db;
 
         public LendModel(BookDbContext db)
@@ -22,7 +27,7 @@ namespace BookLending.Pages.Transaction
             trnrmv.LendingDate = DateTime.Now;
             _db.SaveChanges();
 
-            return RedirectToPage("/Index");
+            return RedirectToPage("/" + control);
         }
     }
 }

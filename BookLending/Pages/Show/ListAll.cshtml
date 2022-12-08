@@ -22,6 +22,7 @@
                <td>BarrowingDate</td>
                <td>LendingDate</td>
                <td></td>
+               <td></td>
             </tr>
         </thead>
         <tbody>
@@ -36,7 +37,15 @@
              <td >@trns.Book.BookAuthor</td>
              <td >@trns.Book.PageNumbers</td> 
              <td >@trns.BarrowingDate</td> 
-             <td >@trns.LendingDate</td> 
+             <td >@trns.LendingDate</td>
+             @if (trns.LendingDate != null)
+             {
+                 <td></td>
+             }
+             @if (trns.LendingDate == null)
+             {
+                 <td ><a class="btn btn-success " asp-page="/Transaction/Lend" asp-route-Tid="@trns.T_ID" asp-route-control = "@Model.control"> <i class="bi bi-pencil">Lend</i> </a></td>
+             }
              <td ><a class="btn btn-danger h-25" asp-page="/Transaction/Delete" asp-route-Tid="@trns.T_ID" asp-route-control = "@Model.control"> <i class="bi bi-x-octagon">Delete</i> </a></td>
             </tr>
         }
