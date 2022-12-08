@@ -8,6 +8,8 @@ namespace BookLending.Pages
     public class IndexModel : PageModel
     { 
         public List<Model.Transaction> Transactions { get; set; }
+        public string control;
+
         private readonly ILogger<IndexModel> _logger;
         private readonly BookDbContext _db;
         public IndexModel(ILogger<IndexModel> logger, BookDbContext db)
@@ -18,6 +20,7 @@ namespace BookLending.Pages
 
         public void OnGet()
         {
+            control = "Index";
             Transactions = _db.Transaction.Where(x => x.LendingDate == null).ToList();
 
             foreach(var trans in Transactions) 

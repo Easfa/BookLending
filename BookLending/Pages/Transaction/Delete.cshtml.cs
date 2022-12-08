@@ -9,6 +9,9 @@ namespace BookLending.Pages.Transaction
         [BindProperty(SupportsGet = true)]
         public int Tid { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        public string control { get; set; }
+
         private readonly BookDbContext _db;
 
         public DeleteModel(BookDbContext db)
@@ -22,7 +25,7 @@ namespace BookLending.Pages.Transaction
             _db.Transaction.Remove(trnrmv);
             _db.SaveChanges();
 
-            return RedirectToPage("/Index");
+            return RedirectToPage("/" + control);
         }
     }
 }

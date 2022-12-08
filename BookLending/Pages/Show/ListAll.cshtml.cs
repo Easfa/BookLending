@@ -7,6 +7,7 @@ namespace BookLending.Pages.Show
     public class ListAllModel : PageModel
     {
         public List<Model.Transaction> Transactions { get; set; }
+        public string control;
         private readonly BookDbContext _db;
         public ListAllModel(BookDbContext db)
         {
@@ -15,6 +16,7 @@ namespace BookLending.Pages.Show
 
         public void OnGet()
         {
+            control = "Show/ListAll";
             Transactions = _db.Transaction.ToList();
 
             foreach (var trans in Transactions)
