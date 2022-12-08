@@ -38,8 +38,8 @@
              <td >@Model.Books[i].BookAuthor</td>
              <td >@Model.Books[i].PageNumbers</td>
              <td >@Model.Transactions[i].BarrowingDate</td>
-             <td width ="5%"><a class="btn btn-success" asp-page="/Transaction/Lend" asp-route-id="@Model.Transactions[i].T_ID"> <i class="bi bi-pencil">Lend</i> </a></td>  
-             <td width ="5%"><a class="btn btn-danger" asp-page="/Transaction/Delete" asp-route-id="@Model.Transactions[i].T_ID"> <i class="bi bi-x-octagon">Delete</i> </a></td>
+             <td ><a class="btn btn-success " asp-page="/Transaction/Lend" asp-route-id="@Model.Transactions[i].T_ID"> <i class="bi bi-pencil">Lend</i> </a></td>  
+             <td ><a class="btn btn-danger h-25" asp-page="/Transaction/Delete" asp-route-id="@Model.Transactions[i].T_ID"> <i class="bi bi-x-octagon">Delete</i> </a></td>
             </tr>
         }
         </tbody>

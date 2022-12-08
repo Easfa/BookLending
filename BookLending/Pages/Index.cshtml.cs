@@ -22,7 +22,7 @@ namespace BookLending.Pages
         {
             Books = _db.Books.ToList();
             Persons = _db.Person.ToList();
-            Transactions = _db.Transaction.ToList();
+            Transactions = _db.Transaction.Where(x => x.LendingDate == null).ToList();
         }
     }
 }
